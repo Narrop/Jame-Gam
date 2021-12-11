@@ -6,12 +6,12 @@
 flags = 4
 load_path = "res://.import/cX+RV3.png-acac1d2c02b602d659a6e811d5b7d4e5.stex"
 
-[sub_resource type="DynamicFontData" id=9]
+[sub_resource type="DynamicFontData" id=12]
 font_path = "res://assets/Fonts/FantaisieArtistique.ttf"
 
 [sub_resource type="DynamicFont" id=10]
 size = 51
-font_data = SubResource( 9 )
+font_data = SubResource( 12 )
 
 [sub_resource type="StyleBoxEmpty" id=11]
 

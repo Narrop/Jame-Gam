@@ -139,12 +139,13 @@ __meta__ = {
 [node name="knight" type="AnimatedSprite" parent="."]
 position = Vector2( 667, 327 )
 frames = SubResource( 13 )
-frame = 2
+frame = 3
 playing = true
 
 [node name="demon" type="AnimatedSprite" parent="."]
 position = Vector2( 570, 332 )
 frames = SubResource( 14 )
+frame = 1
 playing = true
 
 [connection signal="gui_input" from="." to="." method="_on_menu_gui_input"]

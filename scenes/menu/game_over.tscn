@@ -1,8 +1,36 @@
-[gd_scene format=2]
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scenes/menu/game_over.gd" type="Script" id=1]
+[ext_resource path="res://assets/Fonts/FantaisieArtistique.otf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 150
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="Theme" id=3]
+ColorPickerButton/icons/bg = null
 
 [node name="game_over" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 179.0
+margin_top = 236.0
+margin_right = 1014.0
+margin_bottom = 390.0
+custom_colors/font_color = Color( 0.447059, 0.839216, 0.807843, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 5
+custom_fonts/font = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+text = "GAME OVER "
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -10,6 +38,14 @@ __meta__ = {
 [node name="bg_game_over" type="TextureRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 232, 163 )
+theme = SubResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 1.923
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
