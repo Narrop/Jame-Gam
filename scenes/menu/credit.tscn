@@ -33,10 +33,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -248.0
-margin_top = -225.0
-margin_right = 252.0
-margin_bottom = 275.0
+margin_left = -231.0
+margin_top = -150.0
+margin_right = 274.0
+margin_bottom = 350.0
 custom_fonts/font = ExtResource( 1 )
 custom_styles/read_only = SubResource( 2 )
 custom_styles/focus = SubResource( 3 )
@@ -44,5 +44,6 @@ custom_styles/normal = SubResource( 4 )
 custom_styles/completion = SubResource( 5 )
 text = "crédits "
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": false,
+"_editor_description_": ""
 }
