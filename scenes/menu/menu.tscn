@@ -1,8 +1,57 @@
-[gd_scene format=2]
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assets/Fonts/FantaisieArtistique.ttf" type="DynamicFontData" id=1]
+
+[sub_resource type="DynamicFont" id=1]
+size = 51
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[sub_resource type="StyleBoxEmpty" id=5]
+
+[sub_resource type="StyleBoxEmpty" id=6]
 
 [node name="menu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="start" type="Button" parent="."]
+margin_left = 500.0
+margin_top = 500.0
+margin_right = 651.0
+margin_bottom = 556.0
+custom_colors/font_color = Color( 0.447059, 0.839216, 0.807843, 1 )
+custom_colors/font_color_hover = Color( 0.854902, 0.305882, 0.219608, 0.811765 )
+custom_fonts/font = SubResource( 1 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/focus = SubResource( 4 )
+custom_styles/disabled = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+text = "START"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="credit" type="Button" parent="."]
+margin_left = 505.0
+margin_top = 557.0
+margin_right = 668.0
+margin_bottom = 610.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
