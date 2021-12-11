@@ -12,7 +12,7 @@ config_version=4
 
 config/name="Jame Gam"
 run/main_scene="res://scenes/main/main.tscn"
-config/icon="res://icon.png"
+config/icon="res://assets/images/0x72_DungeonTilesetII_v1.4/frames/knight_f_hit_anim_f0.png"
 
 [display]
 
