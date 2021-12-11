@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://assets/Fonts/FantaisieArtistique.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://assets/images/0x72_DungeonTilesetII_v1.4/frames/imp_run_anim_f0.png" type="Texture" id=2]
@@ -10,6 +10,9 @@
 [ext_resource path="res://assets/images/0x72_DungeonTilesetII_v1.4/frames/knight_f_run_anim_f3.png" type="Texture" id=8]
 [ext_resource path="res://assets/images/0x72_DungeonTilesetII_v1.4/frames/imp_run_anim_f1.png" type="Texture" id=9]
 [ext_resource path="res://assets/images/0x72_DungeonTilesetII_v1.4/frames/knight_f_run_anim_f0.png" type="Texture" id=10]
+[ext_resource path="res://scenes/menu/menu.gd" type="Script" id=11]
+
+[sub_resource type="ImageTexture" id=15]
 
 [sub_resource type="DynamicFont" id=1]
 size = 51
@@ -26,6 +29,13 @@ font_data = ExtResource( 1 )
 [sub_resource type="StyleBoxEmpty" id=5]
 
 [sub_resource type="StyleBoxEmpty" id=6]
+
+[sub_resource type="InputEventAction" id=16]
+action = "ui_accept"
+pressed = true
+
+[sub_resource type="ShortCut" id=17]
+shortcut = SubResource( 16 )
 
 [sub_resource type="DynamicFont" id=7]
 size = 51
@@ -48,7 +58,7 @@ animations = [ {
 "frames": [ ExtResource( 10 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ) ],
 "loop": true,
 "name": "default",
-"speed": 15.0
+"speed": 10.0
 } ]
 
 [sub_resource type="SpriteFrames" id=14]
@@ -56,19 +66,21 @@ animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 9 ), ExtResource( 5 ), ExtResource( 4 ) ],
 "loop": true,
 "name": "default",
-"speed": 15.0
+"speed": 10.0
 } ]
 
 [node name="menu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 11 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="menu_bg" type="TextureRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+texture = SubResource( 15 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -90,6 +102,7 @@ custom_styles/pressed = SubResource( 3 )
 custom_styles/focus = SubResource( 4 )
 custom_styles/disabled = SubResource( 5 )
 custom_styles/normal = SubResource( 6 )
+shortcut = SubResource( 17 )
 text = "START"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -128,3 +141,7 @@ position = Vector2( 570, 332 )
 frames = SubResource( 14 )
 frame = 3
 playing = true
+
+[connection signal="gui_input" from="." to="." method="_on_menu_gui_input"]
+[connection signal="pressed" from="start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="credit" to="." method="_on_credit_pressed"]
