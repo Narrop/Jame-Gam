@@ -139,7 +139,7 @@ __meta__ = {
 [node name="knight" type="AnimatedSprite" parent="."]
 position = Vector2( 667, 327 )
 frames = SubResource( 13 )
-frame = 3
+frame = 2
 playing = true
 
 [node name="demon" type="AnimatedSprite" parent="."]
