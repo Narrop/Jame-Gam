@@ -27,7 +27,6 @@ animations = [ {
 } ]
 
 [node name="player" type="KinematicBody2D"]
-position = Vector2( 39, 37 )
 script = ExtResource( 9 )
 __meta__ = {
 "_edit_group_": true
@@ -40,5 +39,5 @@ shape = SubResource( 1 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 2 )
 animation = "running"
-frame = 1
+frame = 3
 playing = true
