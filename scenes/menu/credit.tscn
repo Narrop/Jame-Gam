@@ -15,12 +15,12 @@ font_data = SubResource( 12 )
 
 [sub_resource type="StyleBoxEmpty" id=11]
 
-[sub_resource type="InputEventAction" id=6]
+[sub_resource type="InputEventAction" id=13]
 action = "ui_cancel"
 pressed = true
 
 [sub_resource type="ShortCut" id=7]
-shortcut = SubResource( 6 )
+shortcut = SubResource( 13 )
 
 [node name="credit" type="Control"]
 anchor_right = 1.0
