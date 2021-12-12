@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://assets/images/0x72_DungeonTilesetII_v1.4/frames/chort_idle_anim_f3.png" type="Texture" id=1]
 [ext_resource path="res://assets/images/0x72_DungeonTilesetII_v1.4/frames/chort_idle_anim_f2.png" type="Texture" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://assets/images/0x72_DungeonTilesetII_v1.4/frames/chort_run_anim_f3.png" type="Texture" id=6]
 [ext_resource path="res://assets/images/0x72_DungeonTilesetII_v1.4/frames/chort_run_anim_f0.png" type="Texture" id=7]
 [ext_resource path="res://assets/images/0x72_DungeonTilesetII_v1.4/frames/chort_run_anim_f2.png" type="Texture" id=8]
+[ext_resource path="res://scenes/time/time.gd" type="Script" id=9]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 7, 10.5 )
@@ -29,6 +30,7 @@ animations = [ {
 radius = 170.003
 
 [node name="time2" type="KinematicBody2D"]
+script = ExtResource( 9 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -40,7 +42,7 @@ shape = SubResource( 2 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "running"
-frame = 2
+frame = 3
 playing = true
 
 [node name="DetectRadius" type="Area2D" parent="."]
@@ -49,3 +51,5 @@ collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectRadius"]
 shape = SubResource( 3 )
+
+[connection signal="body_entered" from="DetectRadius" to="." method="_on_DetectRadius_body_entered"]

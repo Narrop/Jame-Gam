@@ -18,9 +18,7 @@ func _physics_process(delta):
 	else:
 		$AnimatedSprite.animation = "running"
 	
-	
 	velocity = move_and_slide(velocity)
-
 
 
 func _on_DetectRadius_body_entered(body):
