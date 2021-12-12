@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://scenes/key/key.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/player/player.tscn" type="PackedScene" id=2]
@@ -6,13 +6,6 @@
 [ext_resource path="res://assets/images/0x72_DungeonTilesetII_v1.4/0x72_DungeonTilesetII_v1.4.png" type="Texture" id=4]
 [ext_resource path="res://scenes/time/time.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/musics and sounds/Joel Francis Burford Free JRPG 8-Bit Music + SFX Samples/WAV Loops/01 Adventure Awaits (LOOP).wav" type="AudioStream" id=6]
-
-[sub_resource type="InputEventAction" id=6]
-action = "ui_cancel"
-pressed = true
-
-[sub_resource type="ShortCut" id=23]
-shortcut = SubResource( 6 )
 
 [sub_resource type="TileSet" id=24]
 0/name = "0x72_DungeonTilesetII_v1.4.png 0"
@@ -666,17 +659,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="echap" type="Button" parent="."]
-visible = false
-margin_left = 1560.0
-margin_top = 182.0
-margin_right = 1608.0
-margin_bottom = 202.0
-shortcut = SubResource( 23 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="floor" type="TileMap" parent="."]
 tile_set = SubResource( 24 )
 cell_size = Vector2( 16, 16 )
@@ -765,5 +747,3 @@ polygon = PoolVector2Array( 11, -9, 11, 14, -13, 14, -13, -10, 11, -10, 11, -16,
 
 [node name="time" parent="." instance=ExtResource( 5 )]
 position = Vector2( 197, 87 )
-
-[connection signal="pressed" from="echap" to="." method="_on_echap_pressed"]
