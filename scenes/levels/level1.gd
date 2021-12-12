@@ -28,9 +28,7 @@ func _process(delta):
 			$player/Text3.visible = false
 			$StaticBody2D/CollisionPolygon2D.disabled = true
 			$StaticBody2D2/CollisionPolygon2D.disabled = true
-
-
-func _on_echap_pressed():
-	var error = get_tree().change_scene("res://scenes/menu/menu.tscn")
-	if (error != OK):
-		print('don\'t work');
+	if(Input.is_action_just_pressed("ui_cancel")):
+		var error = get_tree().change_scene("res://scenes/menu/menu.tscn")
+		if (error != OK):
+			print('don\'t work');
