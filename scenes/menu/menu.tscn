@@ -164,13 +164,12 @@ __meta__ = {
 [node name="knight" type="AnimatedSprite" parent="."]
 position = Vector2( 667, 319 )
 frames = SubResource( 13 )
-frame = 2
+frame = 3
 playing = true
 
 [node name="demon" type="AnimatedSprite" parent="."]
 position = Vector2( 569, 324 )
 frames = SubResource( 14 )
-frame = 3
 playing = true
 
 [node name="button_pressed" type="AudioStreamPlayer" parent="." groups=["SOUND_EFFECT"]]
