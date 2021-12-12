@@ -82,10 +82,10 @@ __meta__ = {
 [node name="menu_bg" type="TextureRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -506.0
-margin_top = -385.0
-margin_right = 122.0
-margin_bottom = 231.0
+margin_left = -422.0
+margin_top = -458.0
+margin_right = 206.0
+margin_bottom = 158.0
 texture = SubResource( 18 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -96,10 +96,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -81.5
-margin_top = -28.0
-margin_right = 81.5
-margin_bottom = 28.0
+margin_left = -81.0
+margin_top = -36.0
+margin_right = 82.0
+margin_bottom = 20.0
 custom_colors/font_color = Color( 0.447059, 0.839216, 0.807843, 1 )
 custom_colors/font_color_hover = Color( 0.854902, 0.305882, 0.219608, 0.811765 )
 custom_fonts/font = SubResource( 1 )
@@ -114,15 +114,38 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="controls" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -119.0
+margin_top = 28.0
+margin_right = 139.0
+margin_bottom = 84.0
+custom_colors/font_color = Color( 0.447059, 0.839216, 0.807843, 1 )
+custom_colors/font_color_hover = Color( 0.854902, 0.305882, 0.219608, 0.811765 )
+custom_fonts/font = SubResource( 1 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/focus = SubResource( 4 )
+custom_styles/disabled = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+shortcut = SubResource( 17 )
+text = "CONTROLS"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="credit" type="Button" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -87.0
-margin_top = 56.0
-margin_right = 88.0
-margin_bottom = 112.0
+margin_left = -81.0
+margin_top = 92.0
+margin_right = 94.0
+margin_bottom = 148.0
 custom_colors/font_color = Color( 0.447059, 0.839216, 0.807843, 1 )
 custom_colors/font_color_hover = Color( 0.854902, 0.305882, 0.219608, 0.811765 )
 custom_fonts/font = SubResource( 7 )
@@ -137,17 +160,18 @@ __meta__ = {
 }
 
 [node name="knight" type="AnimatedSprite" parent="."]
-position = Vector2( 667, 327 )
+position = Vector2( 667, 319 )
 frames = SubResource( 13 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="demon" type="AnimatedSprite" parent="."]
-position = Vector2( 570, 332 )
+position = Vector2( 569, 324 )
 frames = SubResource( 14 )
-frame = 3
+frame = 2
 playing = true
 
 [connection signal="gui_input" from="." to="." method="_on_menu_gui_input"]
 [connection signal="pressed" from="start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="controls" to="." method="_on_controls_pressed"]
 [connection signal="pressed" from="credit" to="." method="_on_credit_pressed"]

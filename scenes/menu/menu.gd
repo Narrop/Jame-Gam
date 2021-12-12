@@ -29,3 +29,9 @@ func _on_credit_pressed():
 		print('don\'t work');
 	
 
+
+
+func _on_controls_pressed():
+	var error = get_tree().change_scene("res://scenes/menu/controls.tscn")
+	if (error != OK):
+		print('don\'t work');
