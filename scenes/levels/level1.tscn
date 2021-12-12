@@ -754,6 +754,7 @@ polygon = PoolVector2Array( 11, -9, 11, 14, -13, 14, -13, -10, 11, -10, 11, -16,
 
 [node name="music_menu_tuto" type="AudioStreamPlayer" parent="." groups=["MUSIC"]]
 stream = ExtResource( 6 )
+volume_db = -20.0
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
 visible = false
