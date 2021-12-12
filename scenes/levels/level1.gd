@@ -9,6 +9,7 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$player/Text.visible = true
+	$music_menu_tuto.play()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
