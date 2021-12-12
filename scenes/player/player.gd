@@ -30,7 +30,10 @@ func get_input():
 	if Input.is_action_pressed("ui_select") and on_object != null:
 		if (on_object.is_in_group("KEY")):
 			got_key = true
-			get_tree().change_scene("res://scenes/levels/level" + str(int(get_tree().current_scene.name) + 1) + ".tscn")
+			if int(get_tree().current_scene.name) < 10:
+				get_tree().change_scene("res://scenes/levels/level" + str(int(get_tree().current_scene.name) + 1) + ".tscn")
+			else:
+				get_tree().change_scene("res://scenes/menu/win.tscn")
 			get_tree().call_group("KEY", "queue_free")
 		
 func _on_detector_area_entered(area):
