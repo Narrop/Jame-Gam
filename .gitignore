@@ -1,2 +1,18 @@
 
 
+export_presets.cfg
+export/index.wasm
+export/index.png
+export/index.pck
+export/index.js
+export/index.icon.png
+export/index.html
+export/index.audio.worklet.js
+export/index.apple-touch-icon.png
+export.zip
+.import/Time Demons.png-c896b08c0892f3fcc61f83ae080875dd.stex
+.import/Time Demons.png-c896b08c0892f3fcc61f83ae080875dd.md5
+.import/Time Demons.icon.png-1602f55064707d43153dc702ac9888b3.stex
+.import/Time Demons.icon.png-1602f55064707d43153dc702ac9888b3.md5
+.import/Time Demons.apple-touch-icon.png-e5930587386df853ed1c31c4390d5a41.stex
+.import/Time Demons.apple-touch-icon.png-e5930587386df853ed1c31c4390d5a41.md5
