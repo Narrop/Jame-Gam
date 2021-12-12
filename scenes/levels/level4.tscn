@@ -730,7 +730,7 @@ position = Vector2( 359, -24 )
 position = Vector2( -800, -143 )
 
 [node name="time10" parent="Node2D" instance=ExtResource( 8 )]
-position = Vector2( -568, -862 )
+position = Vector2( -551, -866 )
 
 [node name="time11" parent="Node2D" instance=ExtResource( 8 )]
 position = Vector2( -336, -420 )

@@ -7,6 +7,7 @@ var speed = 200
 var velocity = Vector2.ZERO
 var on_object = null
 var got_key = false
+var key_num = 0
 
 func get_input():
 	
@@ -30,6 +31,7 @@ func get_input():
 	if Input.is_action_pressed("ui_select") and on_object != null:
 		if (on_object.is_in_group("KEY")):
 			got_key = true
+			Global.key_num = Global.key_num + 1
 			if int(get_tree().current_scene.name) < 10:
 				get_tree().change_scene("res://scenes/levels/level" + str(int(get_tree().current_scene.name) + 1) + ".tscn")
 			else:
@@ -63,9 +65,16 @@ func _on_monster_body_entered(body):
 		$death_time.start()
 		$music_defeat.play()
 		$AnimatedSprite.animation = "dead"
+		key_num = Global.key_num
+		if Global.key_num >= 1:
+			Global.key_num = Global.key_num - 1
 
 
 
 func _on_death_time_timeout():
-	get_tree().change_scene("res://scenes/menu/game_over.tscn")
+	if key_num < 1:
+		get_tree().change_scene("res://scenes/menu/game_over.tscn")
+	else:
+		get_tree().change_scene("res://scenes/levels/level" + str(Global.key_num + 1) + ".tscn")
+		
 	

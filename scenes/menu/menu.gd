@@ -18,7 +18,7 @@ func _on_start_mouse_entered():
 	$button_pressed.play()
 
 func _on_start_pressed():
-	var error = get_tree().change_scene("res://scenes/levels/level1.tscn")
+	var error = get_tree().change_scene("res://scenes/levels/level" + str(Global.key_num + 1) + ".tscn")
 	if (error != OK):
 		print('don\'t work');
 	

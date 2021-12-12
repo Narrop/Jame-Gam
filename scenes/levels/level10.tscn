@@ -709,10 +709,10 @@ position = Vector2( -320, -744 )
 position = Vector2( -864, -344 )
 
 [node name="time5" parent="Node2D" instance=ExtResource( 5 )]
-position = Vector2( 1376, 192 )
+position = Vector2( -306, 7 )
 
 [node name="time2" parent="Node2D" instance=ExtResource( 6 )]
-position = Vector2( 488, -344 )
+position = Vector2( -240, 22 )
 
 [node name="time6" parent="Node2D" instance=ExtResource( 6 )]
 position = Vector2( -640, 48 )
@@ -724,16 +724,16 @@ position = Vector2( -1024, -832 )
 position = Vector2( -1176, -480 )
 
 [node name="time" parent="Node2D" instance=ExtResource( 7 )]
-position = Vector2( -536, -1240 )
+position = Vector2( -79, -1029 )
 
 [node name="time9" parent="Node2D" instance=ExtResource( 7 )]
 position = Vector2( -248, -312 )
 
 [node name="time10" parent="Node2D" instance=ExtResource( 7 )]
-position = Vector2( -1176, -1216 )
+position = Vector2( -212, -1211 )
 
 [node name="time11" parent="Node2D" instance=ExtResource( 7 )]
-position = Vector2( -112, -24 )
+position = Vector2( -564, -1051 )
 
 [node name="player" parent="." instance=ExtResource( 8 )]
 position = Vector2( -766, -755 )
