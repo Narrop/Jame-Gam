@@ -59,7 +59,7 @@ one_shot = true
 position = Vector2( 667, 312 )
 scale = Vector2( 1.8125, 1.58767 )
 frames = SubResource( 4 )
-frame = 2
+frame = 3
 playing = true
 
 [node name="echap" type="Button" parent="."]
