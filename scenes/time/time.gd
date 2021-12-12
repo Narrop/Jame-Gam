@@ -52,12 +52,12 @@ func path_fiding():
 	if Input.is_action_pressed('ui_right'):
 		run(1, 'x')
 		$AnimatedSprite.flip_h = false
-	elif Input.is_action_pressed('ui_left'):
+	if Input.is_action_pressed('ui_left'):
 		run(-1, 'x')
 		$AnimatedSprite.flip_h = true
 	if Input.is_action_pressed('ui_down'):
 		run(1, 'y')
-	elif Input.is_action_pressed('ui_up'):
+	if Input.is_action_pressed('ui_up'):
 		run(-1, 'y')
 		
 	$AnimatedSprite.animation = anim

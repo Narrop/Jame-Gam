@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/01 Adventure Awaits (LOOP).wav-ea9f3579d3ec7fa7bfdb7a8f4d37a833.sample"
+
+[deps]
+
+source_file="res://assets/musics and sounds/Joel Francis Burford Free JRPG 8-Bit Music + SFX Samples/WAV Loops/01 Adventure Awaits (LOOP).wav"
+dest_files=[ "res://.import/01 Adventure Awaits (LOOP).wav-ea9f3579d3ec7fa7bfdb7a8f4d37a833.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0
