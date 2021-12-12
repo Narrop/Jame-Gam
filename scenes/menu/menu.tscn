@@ -13,7 +13,6 @@
 [ext_resource path="res://scenes/menu/menu.gd" type="Script" id=11]
 
 [sub_resource type="StreamTexture" id=18]
-flags = 4
 load_path = "res://.import/cX+RV3.png-6e11399e5a42cfac600026c6373fbfc7.stex"
 
 [sub_resource type="DynamicFont" id=1]
@@ -162,13 +161,12 @@ __meta__ = {
 [node name="knight" type="AnimatedSprite" parent="."]
 position = Vector2( 667, 319 )
 frames = SubResource( 13 )
-frame = 1
 playing = true
 
 [node name="demon" type="AnimatedSprite" parent="."]
 position = Vector2( 569, 324 )
 frames = SubResource( 14 )
-frame = 2
+frame = 1
 playing = true
 
 [connection signal="gui_input" from="." to="." method="_on_menu_gui_input"]
