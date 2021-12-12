@@ -18,6 +18,7 @@ func _physics_process(delta):
 	else:
 		$AnimatedSprite.animation = "running"
 	
+	velocity = velocity.normalized() * run_speed
 	velocity = move_and_slide(velocity)
 
 
