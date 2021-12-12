@@ -2,13 +2,16 @@ extends KinematicBody2D
 
 # Code du joueur qui lui permet de se mouvoir plus les interactions
 
+#variable globale du script
 var speed = 200 
-
 var velocity = Vector2.ZERO
 
 func get_input():
+	
 	velocity = Vector2.ZERO
 	var zero = Vector2.ZERO
+	
+	
 	if Input.is_action_pressed('ui_right'):
 		velocity.x += 1
 		$AnimatedSprite.flip_h = false
