@@ -8,8 +8,6 @@ var velocity = Vector2.ZERO
 var on_object = null
 var got_key = false
 
-
-
 func get_input():
 	
 	velocity = Vector2.ZERO
