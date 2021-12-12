@@ -118,9 +118,9 @@ __meta__ = {
 }
 
 [node name="input_interact" type="Button" parent="."]
-margin_left = 552.0
+margin_left = 616.0
 margin_top = 119.0
-margin_right = 583.0
+margin_right = 647.0
 margin_bottom = 172.0
 rect_pivot_offset = Vector2( 70.9996, 39.0002 )
 custom_colors/font_color_disabled = Color( 0.447059, 0.839216, 0.807843, 1 )
