@@ -16,7 +16,6 @@
 
 [sub_resource type="StyleBoxFlat" id=21]
 bg_color = Color( 0, 0, 0, 1 )
-border_color = Color( 0, 0, 0, 1 )
 
 [sub_resource type="DynamicFont" id=1]
 size = 51
@@ -95,16 +94,19 @@ margin_top = -456.0
 margin_right = 206.0
 margin_bottom = 160.0
 custom_styles/panel = SubResource( 21 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="start" type="Button" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -81.0
-margin_top = -36.0
-margin_right = 82.0
-margin_bottom = 20.0
+margin_left = -91.0
+margin_top = -28.0
+margin_right = 72.0
+margin_bottom = 28.0
 custom_colors/font_color = Color( 0.447059, 0.839216, 0.807843, 1 )
 custom_colors/font_color_hover = Color( 0.854902, 0.305882, 0.219608, 0.811765 )
 custom_fonts/font = SubResource( 1 )
@@ -148,10 +150,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -81.0
-margin_top = 48.0
-margin_right = 94.0
-margin_bottom = 104.0
+margin_left = -91.0
+margin_top = 28.0
+margin_right = 84.0
+margin_bottom = 84.0
 custom_colors/font_color = Color( 0.447059, 0.839216, 0.807843, 1 )
 custom_colors/font_color_hover = Color( 0.854902, 0.305882, 0.219608, 0.811765 )
 custom_fonts/font = SubResource( 7 )
@@ -166,13 +168,13 @@ __meta__ = {
 }
 
 [node name="knight" type="AnimatedSprite" parent="."]
-position = Vector2( 667, 319 )
+position = Vector2( 658, 327 )
 frames = SubResource( 13 )
 frame = 2
 playing = true
 
 [node name="demon" type="AnimatedSprite" parent="."]
-position = Vector2( 569, 324 )
+position = Vector2( 560, 333 )
 frames = SubResource( 14 )
 frame = 3
 playing = true
@@ -186,7 +188,7 @@ stream = ExtResource( 13 )
 [node name="time" type="Label" parent="."]
 margin_left = 129.0
 margin_top = 50.0
-margin_right = 1008.0
+margin_right = 497.0
 margin_bottom = 361.0
 custom_colors/font_color = Color( 0.447059, 0.839216, 0.807843, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
