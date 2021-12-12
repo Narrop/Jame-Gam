@@ -108,5 +108,6 @@ __meta__ = {
 
 [node name="music_menu_tuto" type="AudioStreamPlayer" parent="." groups=["MUSIC"]]
 stream = ExtResource( 1 )
+volume_db = -20.0
 
 [connection signal="pressed" from="echap" to="." method="_on_echap_pressed"]
