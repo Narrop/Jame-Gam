@@ -170,19 +170,21 @@ __meta__ = {
 [node name="knight" type="AnimatedSprite" parent="."]
 position = Vector2( 658, 327 )
 frames = SubResource( 13 )
+frame = 3
 playing = true
 
 [node name="demon" type="AnimatedSprite" parent="."]
 position = Vector2( 560, 333 )
 frames = SubResource( 14 )
-frame = 1
 playing = true
 
 [node name="button_pressed" type="AudioStreamPlayer" parent="." groups=["SOUND_EFFECT"]]
 stream = ExtResource( 12 )
+volume_db = -20.0
 
 [node name="music_menu_tuto" type="AudioStreamPlayer" parent="." groups=["MUSIC"]]
 stream = ExtResource( 13 )
+volume_db = -20.0
 
 [node name="time" type="Label" parent="."]
 margin_left = 129.0
