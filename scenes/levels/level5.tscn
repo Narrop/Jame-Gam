@@ -703,7 +703,7 @@ volume_db = -20.0
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="time3" parent="Node2D" instance=ExtResource( 8 )]
-position = Vector2( -1168, -238 )
+position = Vector2( -1132, -257 )
 
 [node name="time4" parent="Node2D" instance=ExtResource( 8 )]
 position = Vector2( 744, 429 )
@@ -712,7 +712,7 @@ position = Vector2( 744, 429 )
 position = Vector2( 1249, -73 )
 
 [node name="time2" parent="Node2D" instance=ExtResource( 6 )]
-position = Vector2( -193, -1268 )
+position = Vector2( -206, -1255 )
 
 [node name="time6" parent="Node2D" instance=ExtResource( 6 )]
 position = Vector2( -584, 231 )
@@ -721,7 +721,7 @@ position = Vector2( -584, 231 )
 position = Vector2( -576, -1256 )
 
 [node name="time8" parent="Node2D" instance=ExtResource( 6 )]
-position = Vector2( -1144, -1256 )
+position = Vector2( -1136, -1233 )
 
 [node name="time" parent="Node2D" instance=ExtResource( 7 )]
 position = Vector2( 359, -24 )
@@ -730,7 +730,7 @@ position = Vector2( 359, -24 )
 position = Vector2( -943, 95 )
 
 [node name="time10" parent="Node2D" instance=ExtResource( 7 )]
-position = Vector2( -808, -696 )
+position = Vector2( -799, -730 )
 
 [node name="time11" parent="Node2D" instance=ExtResource( 7 )]
 position = Vector2( -328, -688 )
