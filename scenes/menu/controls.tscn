@@ -1,0 +1,292 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://scenes/menu/controls.gd" type="Script" id=1]
+[ext_resource path="res://assets/Fonts/FantaisieArtistique.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/Fonts/new_dynamicfont.tres" type="DynamicFont" id=3]
+[ext_resource path="res://scenes/menu/popup.gd" type="Script" id=4]
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="InputEventAction" id=7]
+action = "ui_cancel"
+pressed = true
+
+[sub_resource type="ShortCut" id=8]
+shortcut = SubResource( 7 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 51
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=13]
+size = 51
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxEmpty" id=15]
+
+[sub_resource type="StyleBoxEmpty" id=16]
+
+[sub_resource type="DynamicFont" id=11]
+size = 51
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=12]
+size = 70
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=19]
+bg_color = Color( 0, 0, 0, 0.768627 )
+
+[node name="controls" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bg_controls" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_top = 87.0
+margin_right = 1200.0
+margin_bottom = 91.0
+color = Color( 0.447059, 0.839216, 0.807843, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="echap" type="Button" parent="."]
+margin_left = 1929.0
+margin_top = 392.0
+margin_right = 1977.0
+margin_bottom = 412.0
+shortcut = SubResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="interact" type="Label" parent="."]
+anchor_left = 0.0916667
+anchor_top = 0.145833
+anchor_right = 0.176667
+anchor_bottom = 0.2
+margin_left = 37.0
+margin_top = 14.0
+margin_right = 87.0
+margin_bottom = 28.0
+custom_colors/font_color = Color( 0.447059, 0.839216, 0.807843, 1 )
+custom_fonts/font = SubResource( 10 )
+text = "Interact"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="input_interact" type="Button" parent="."]
+anchor_left = -0.138333
+anchor_top = -0.216667
+anchor_right = -0.0466667
+anchor_bottom = -0.176389
+margin_left = 718.0
+margin_top = 275.0
+margin_right = 776.0
+margin_bottom = 299.0
+custom_colors/font_color = Color( 0.447059, 0.839216, 0.807843, 1 )
+custom_fonts/font = SubResource( 13 )
+custom_styles/focus = SubResource( 15 )
+custom_styles/normal = SubResource( 16 )
+text = "E"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Keybind" type="Label" parent="."]
+anchor_left = -0.0480852
+anchor_top = -0.0734607
+anchor_right = 0.0369148
+anchor_bottom = -0.0192941
+margin_left = 185.702
+margin_top = 76.8917
+margin_right = 243.702
+margin_bottom = 90.8917
+rect_pivot_offset = Vector2( 63, 13 )
+custom_colors/font_color = Color( 0.447059, 0.839216, 0.807843, 1 )
+custom_fonts/font = ExtResource( 3 )
+text = "Keybind"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Key" type="Label" parent="."]
+anchor_left = 0.156908
+anchor_top = -0.174847
+anchor_right = 0.241908
+anchor_bottom = -0.120681
+margin_left = 363.711
+margin_top = 149.89
+margin_right = 421.711
+margin_bottom = 163.89
+rect_pivot_offset = Vector2( 63, 13 )
+custom_colors/font_color = Color( 0.447059, 0.839216, 0.807843, 1 )
+custom_fonts/font = ExtResource( 3 )
+text = "Key"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="down" type="Label" parent="."]
+anchor_left = 0.0436111
+anchor_top = 0.226285
+anchor_right = 0.128611
+anchor_bottom = 0.280451
+margin_left = 94.6667
+margin_top = 33.075
+margin_right = 144.667
+margin_bottom = 47.075
+rect_pivot_offset = Vector2( 95, 21 )
+custom_colors/font_color = Color( 0.447059, 0.839216, 0.807843, 1 )
+custom_fonts/font = ExtResource( 3 )
+text = "Down"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="input_down" type="LineEdit" parent="."]
+anchor_left = -0.736667
+anchor_top = -0.491667
+anchor_right = -0.683333
+anchor_bottom = -0.473611
+margin_left = 1436.0
+margin_top = 550.0
+margin_right = 1494.0
+margin_bottom = 574.0
+text = "DOWN"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="up" type="Label" parent="."]
+anchor_left = 0.00555552
+anchor_top = 0.328958
+anchor_right = 0.0197222
+anchor_bottom = 0.383125
+margin_left = 152.333
+margin_top = 52.15
+margin_right = 202.333
+margin_bottom = 66.15
+custom_colors/font_color = Color( 0.447059, 0.839216, 0.807843, 1 )
+custom_fonts/font = SubResource( 11 )
+text = "UP"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="input_up" type="LineEdit" parent="."]
+anchor_left = -1.335
+anchor_top = -0.744444
+anchor_right = -1.21417
+anchor_bottom = -0.744444
+margin_left = 2154.0
+margin_top = 825.0
+margin_right = 2212.0
+margin_bottom = 849.0
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="right" type="Label" parent="."]
+anchor_left = -0.0525001
+anchor_top = 0.420521
+anchor_right = -0.00500005
+anchor_bottom = 0.474687
+margin_left = 210.0
+margin_top = 71.225
+margin_right = 260.0
+margin_bottom = 85.225
+custom_colors/font_color = Color( 0.447059, 0.839216, 0.807843, 1 )
+custom_fonts/font = SubResource( 12 )
+text = "Right"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="input_right" type="LineEdit" parent="."]
+anchor_left = -1.91083
+anchor_top = -1.07361
+anchor_right = -1.91083
+anchor_bottom = -1.07361
+margin_left = 2872.0
+margin_top = 1100.0
+margin_right = 2930.0
+margin_bottom = 1124.0
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="input_left" type="LineEdit" parent="."]
+anchor_left = -2.5175
+anchor_top = -1.24306
+anchor_right = -2.48583
+anchor_bottom = -1.2125
+margin_left = 3590.0
+margin_top = 1375.0
+margin_right = 3648.0
+margin_bottom = 1399.0
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="left" type="Label" parent="."]
+anchor_left = -0.240578
+anchor_top = 0.444408
+anchor_right = -0.193078
+anchor_bottom = 0.498574
+margin_left = 435.693
+margin_top = 160.027
+margin_right = 485.693
+margin_bottom = 174.027
+custom_colors/font_color = Color( 0.447059, 0.839216, 0.807843, 1 )
+custom_fonts/font = SubResource( 12 )
+text = "Left"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="popup" type="PopupPanel" parent="."]
+visible = true
+margin_right = 1200.0
+margin_bottom = 720.0
+custom_styles/panel = SubResource( 19 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="press_a_key" type="Label" parent="popup"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -162.0
+margin_top = -33.0
+margin_right = 143.0
+margin_bottom = 39.0
+custom_colors/font_color = Color( 0.447059, 0.839216, 0.807843, 1 )
+custom_fonts/font = SubResource( 12 )
+text = "Press a key ..."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="echap" to="." method="_on_echap_pressed"]
+[connection signal="pressed" from="input_interact" to="." method="_on_input_interact_pressed"]
+[connection signal="about_to_show" from="popup" to="." method="_on_popup_about_to_show"]
