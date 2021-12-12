@@ -28,3 +28,15 @@ func _on_echap_pressed():
 #
 #func _on_popup_about_to_show():
 	
+func pop_up():
+	if ($popup.visible == true):
+		$popup.visible = false 
+	else :
+		$popup.visible = true 
+
+func _on_input_interact_pressed():
+	pop_up()
+	while (42): 
+		var totaux = "z"
+		
+		
