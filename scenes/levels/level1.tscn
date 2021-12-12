@@ -1,9 +1,10 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://scenes/key/key.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/player/player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/levels/level1.gd" type="Script" id=3]
 [ext_resource path="res://assets/images/0x72_DungeonTilesetII_v1.4/0x72_DungeonTilesetII_v1.4.png" type="Texture" id=4]
+[ext_resource path="res://scenes/time/time.tscn" type="PackedScene" id=5]
 
 [sub_resource type="InputEventAction" id=6]
 action = "ui_cancel"
@@ -748,5 +749,8 @@ visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 polygon = PoolVector2Array( 11, -9, 11, 14, -13, 14, -13, -10, 11, -10, 11, -16, -19, -16, -19, 19, 17, 19, 17, -16, 11, -16 )
+
+[node name="time" parent="." instance=ExtResource( 5 )]
+position = Vector2( -189, -37 )
 
 [connection signal="pressed" from="echap" to="." method="_on_echap_pressed"]
