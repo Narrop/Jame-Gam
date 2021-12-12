@@ -738,4 +738,9 @@ position = Vector2( -112, -24 )
 [node name="player" parent="." instance=ExtResource( 8 )]
 position = Vector2( -766, -755 )
 
+[node name="Camera2D" type="Camera2D" parent="player"]
+visible = false
+current = true
+zoom = Vector2( 0.25, 0.25 )
+
 [connection signal="pressed" from="echap" to="." method="_on_echap_pressed"]
