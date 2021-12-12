@@ -1,7 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/musics and sounds/Joel Francis Burford Free JRPG 8-Bit Music + SFX Samples/WAV Loops/01 Adventure Awaits (LOOP).wav" type="AudioStream" id=1]
 [ext_resource path="res://scenes/menu/credit.gd" type="Script" id=2]
+
+[sub_resource type="StyleBoxFlat" id=14]
+bg_color = Color( 0, 0, 0, 1 )
 
 [sub_resource type="DynamicFontData" id=12]
 font_path = "res://assets/Fonts/FantaisieArtistique.ttf"
@@ -34,6 +37,7 @@ margin_left = -330.0
 margin_top = -454.0
 margin_right = 298.0
 margin_bottom = 162.0
+custom_styles/panel = SubResource( 14 )
 
 [node name="Credits_title" type="Label" parent="."]
 anchor_left = 0.5
@@ -72,10 +76,10 @@ Narro
 Stfiler
 Neuroglie
 
-Special thanks to:
-
+Special thanks to :
+0x72
 gabemiller74 
-0x72"
+Joel Francis Burford"
 align = 1
 valign = 1
 __meta__ = {
