@@ -14,3 +14,8 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+func _on_echap_pressed():
+	var error = get_tree().change_scene("res://scenes/menu/menu.tscn")
+	if (error != OK):
+		print('don\'t work');

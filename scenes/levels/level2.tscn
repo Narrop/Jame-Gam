@@ -687,6 +687,7 @@ func get_input():
 		if (on_object.is_in_group(\"KEY\")):
 			got_key = true
 			get_tree().call_group(\"KEY\", \"queue_free\")
+			get_tree().change_scene(\"res://scenes/Levels/level\" + str(int(get_tree().current_scene.name) + 1) + \".tscn\")
 
 func _on_detector_area_entered(area):
 	on_object = area
@@ -757,3 +758,5 @@ zoom = Vector2( 0.25, 0.25 )
 
 [node name="key" parent="." instance=ExtResource( 2 )]
 position = Vector2( 132, 1 )
+
+[connection signal="pressed" from="echap" to="." method="_on_echap_pressed"]

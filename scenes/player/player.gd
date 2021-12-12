@@ -32,6 +32,7 @@ func get_input():
 		if (on_object.is_in_group("KEY")):
 			got_key = true
 			get_tree().call_group("KEY", "queue_free")
+			get_tree().change_scene("res://scenes/levels/level" + str(int(get_tree().current_scene.name) + 1) + ".tscn")
 
 func _on_detector_area_entered(area):
 	on_object = area

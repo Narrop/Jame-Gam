@@ -17,7 +17,7 @@ func _ready():
 
 
 func _on_start_pressed():
-	var error = get_tree().change_scene("res://scenes/level1/level1.tscn")
+	var error = get_tree().change_scene("res://scenes/levels/level1.tscn")
 	if (error != OK):
 		print('don\'t work');
 	
