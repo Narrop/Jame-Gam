@@ -8,12 +8,21 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	$player/Text.visible = true
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	if(Input.is_action_just_pressed("ui_accept")):
+		if $player/Text.visible == true:
+			$player/Text2.visible = true
+			$player/Text.visible = false
+		elif$player/Text2.visible == true:
+			$player/Text3.visible = true
+			$player/Text2.visible = false
+		else:
+			$player/Text3.visible = false
+			$StaticBody2D/CollisionPolygon2D.disabled = true
 
 
 func _on_echap_pressed():
