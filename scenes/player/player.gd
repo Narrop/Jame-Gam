@@ -59,7 +59,6 @@ func _on_monster_body_entered(body):
 	$death_time.start()
 	$music_defeat.play()
 
-	
 
 
 func _on_death_time_timeout():

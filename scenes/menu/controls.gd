@@ -38,7 +38,7 @@ func pop_up():
 
 func _on_input_interact_pressed():
 	pop_up()
-	while (42): 
-		_set_keys()
+	#while (42): 
+		#_set_keys()
 		
 		
