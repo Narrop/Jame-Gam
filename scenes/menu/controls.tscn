@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://scenes/menu/controls.gd" type="Script" id=1]
 [ext_resource path="res://assets/Fonts/FantaisieArtistique.ttf" type="DynamicFontData" id=2]
@@ -24,18 +24,48 @@ font_data = ExtResource( 2 )
 size = 51
 font_data = ExtResource( 2 )
 
+[sub_resource type="StyleBoxEmpty" id=23]
+
+[sub_resource type="StyleBoxEmpty" id=24]
+
 [sub_resource type="StyleBoxEmpty" id=15]
 
+[sub_resource type="StyleBoxEmpty" id=25]
+
 [sub_resource type="StyleBoxEmpty" id=16]
+
+[sub_resource type="StyleBoxEmpty" id=20]
+
+[sub_resource type="StyleBoxEmpty" id=21]
+
+[sub_resource type="StyleBoxEmpty" id=22]
 
 [sub_resource type="DynamicFont" id=11]
 size = 51
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 2 )
 
+[sub_resource type="StyleBoxEmpty" id=26]
+
+[sub_resource type="StyleBoxEmpty" id=27]
+
+[sub_resource type="StyleBoxEmpty" id=28]
+
 [sub_resource type="DynamicFont" id=12]
 size = 70
 font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxEmpty" id=29]
+
+[sub_resource type="StyleBoxEmpty" id=30]
+
+[sub_resource type="StyleBoxEmpty" id=31]
+
+[sub_resource type="StyleBoxEmpty" id=32]
+
+[sub_resource type="StyleBoxEmpty" id=33]
+
+[sub_resource type="StyleBoxEmpty" id=34]
 
 [sub_resource type="StyleBoxFlat" id=19]
 bg_color = Color( 0, 0, 0, 0.768627 )
@@ -100,9 +130,17 @@ margin_left = 718.0
 margin_top = 275.0
 margin_right = 776.0
 margin_bottom = 299.0
+rect_pivot_offset = Vector2( 70.9996, 39.0002 )
+custom_colors/font_color_disabled = Color( 0.447059, 0.839216, 0.807843, 1 )
+custom_colors/font_color_focus = Color( 0.447059, 0.839216, 0.807843, 1 )
 custom_colors/font_color = Color( 0.447059, 0.839216, 0.807843, 1 )
+custom_colors/font_color_hover = Color( 0.447059, 0.839216, 0.807843, 1 )
+custom_colors/font_color_pressed = Color( 0.447059, 0.839216, 0.807843, 1 )
 custom_fonts/font = SubResource( 13 )
+custom_styles/hover = SubResource( 23 )
+custom_styles/pressed = SubResource( 24 )
 custom_styles/focus = SubResource( 15 )
+custom_styles/disabled = SubResource( 25 )
 custom_styles/normal = SubResource( 16 )
 text = "E"
 __meta__ = {
@@ -127,9 +165,9 @@ __meta__ = {
 }
 
 [node name="Key" type="Label" parent="."]
-anchor_left = 0.156908
+anchor_left = 0.191907
 anchor_top = -0.174847
-anchor_right = 0.241908
+anchor_right = 0.276908
 anchor_bottom = -0.120681
 margin_left = 363.711
 margin_top = 149.89
@@ -160,18 +198,30 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="input_down" type="LineEdit" parent="."]
-anchor_left = -0.736667
-anchor_top = -0.491667
-anchor_right = -0.683333
-anchor_bottom = -0.473611
-margin_left = 1436.0
-margin_top = 550.0
-margin_right = 1494.0
-margin_bottom = 574.0
+[node name="input_down" type="Button" parent="."]
+anchor_left = -0.138333
+anchor_top = -0.216667
+anchor_right = -0.0466667
+anchor_bottom = -0.176389
+margin_left = 718.0
+margin_top = 352.0
+margin_right = 776.0
+margin_bottom = 402.865
+rect_pivot_offset = Vector2( 70.9996, 39.0002 )
+custom_colors/font_color_disabled = Color( 0.447059, 0.839216, 0.807843, 1 )
+custom_colors/font_color_focus = Color( 0.447059, 0.839216, 0.807843, 1 )
+custom_colors/font_color = Color( 0.447059, 0.839216, 0.807843, 1 )
+custom_colors/font_color_hover = Color( 0.447059, 0.839216, 0.807843, 1 )
+custom_colors/font_color_pressed = Color( 0.447059, 0.839216, 0.807843, 1 )
+custom_fonts/font = SubResource( 13 )
+custom_styles/hover = SubResource( 20 )
+custom_styles/pressed = SubResource( 21 )
+custom_styles/focus = SubResource( 15 )
+custom_styles/disabled = SubResource( 22 )
+custom_styles/normal = SubResource( 16 )
 text = "DOWN"
 __meta__ = {
-"_edit_use_anchors_": true
+"_edit_use_anchors_": false
 }
 
 [node name="up" type="Label" parent="."]
@@ -190,17 +240,31 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="input_up" type="LineEdit" parent="."]
-anchor_left = -1.335
-anchor_top = -0.744444
-anchor_right = -1.21417
-anchor_bottom = -0.744444
-margin_left = 2154.0
-margin_top = 825.0
-margin_right = 2212.0
-margin_bottom = 849.0
+[node name="input_up" type="Button" parent="."]
+anchor_left = -0.138333
+anchor_top = -0.216667
+anchor_right = -0.0466667
+anchor_bottom = -0.176389
+margin_left = 718.0
+margin_top = 427.0
+margin_right = 776.0
+margin_bottom = 477.865
+rect_pivot_offset = Vector2( 37, 45 )
+custom_colors/font_color_disabled = Color( 0.447059, 0.839216, 0.807843, 1 )
+custom_colors/font_color_focus = Color( 0.447059, 0.839216, 0.807843, 1 )
+custom_colors/font_color = Color( 0.447059, 0.839216, 0.807843, 1 )
+custom_colors/font_color_hover = Color( 0.447059, 0.839216, 0.807843, 1 )
+custom_colors/font_color_pressed = Color( 0.447059, 0.839216, 0.807843, 1 )
+custom_fonts/font = SubResource( 13 )
+custom_styles/hover = SubResource( 26 )
+custom_styles/pressed = SubResource( 27 )
+custom_styles/focus = SubResource( 15 )
+custom_styles/disabled = SubResource( 28 )
+custom_styles/normal = SubResource( 16 )
+text = "UP"
 __meta__ = {
-"_edit_use_anchors_": true
+"_edit_use_anchors_": false,
+"_editor_description_": ""
 }
 
 [node name="right" type="Label" parent="."]
@@ -219,30 +283,30 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="input_right" type="LineEdit" parent="."]
-anchor_left = -1.91083
-anchor_top = -1.07361
-anchor_right = -1.91083
-anchor_bottom = -1.07361
-margin_left = 2872.0
-margin_top = 1100.0
-margin_right = 2930.0
-margin_bottom = 1124.0
+[node name="input_right" type="Button" parent="."]
+anchor_left = -0.138333
+anchor_top = -0.216667
+anchor_right = -0.0466667
+anchor_bottom = -0.176389
+margin_left = 718.0
+margin_top = 515.0
+margin_right = 775.999
+margin_bottom = 565.865
+rect_pivot_offset = Vector2( 37, 45 )
+custom_colors/font_color_disabled = Color( 0.447059, 0.839216, 0.807843, 1 )
+custom_colors/font_color_focus = Color( 0.447059, 0.839216, 0.807843, 1 )
+custom_colors/font_color = Color( 0.447059, 0.839216, 0.807843, 1 )
+custom_colors/font_color_hover = Color( 0.447059, 0.839216, 0.807843, 1 )
+custom_colors/font_color_pressed = Color( 0.447059, 0.839216, 0.807843, 1 )
+custom_fonts/font = SubResource( 13 )
+custom_styles/hover = SubResource( 29 )
+custom_styles/pressed = SubResource( 30 )
+custom_styles/focus = SubResource( 15 )
+custom_styles/disabled = SubResource( 31 )
+custom_styles/normal = SubResource( 16 )
+text = "RIGHT"
 __meta__ = {
-"_edit_use_anchors_": true
-}
-
-[node name="input_left" type="LineEdit" parent="."]
-anchor_left = -2.5175
-anchor_top = -1.24306
-anchor_right = -2.48583
-anchor_bottom = -1.2125
-margin_left = 3590.0
-margin_top = 1375.0
-margin_right = 3648.0
-margin_bottom = 1399.0
-__meta__ = {
-"_edit_use_anchors_": true
+"_edit_use_anchors_": false
 }
 
 [node name="left" type="Label" parent="."]
@@ -261,10 +325,35 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
+[node name="input_left" type="Button" parent="."]
+anchor_left = -0.138333
+anchor_top = -0.216667
+anchor_right = -0.0466667
+anchor_bottom = -0.176389
+margin_left = 718.0
+margin_top = 620.0
+margin_right = 776.0
+margin_bottom = 670.866
+rect_pivot_offset = Vector2( 37, 45 )
+custom_colors/font_color_disabled = Color( 0.447059, 0.839216, 0.807843, 1 )
+custom_colors/font_color_focus = Color( 0.447059, 0.839216, 0.807843, 1 )
+custom_colors/font_color = Color( 0.447059, 0.839216, 0.807843, 1 )
+custom_colors/font_color_hover = Color( 0.447059, 0.839216, 0.807843, 1 )
+custom_colors/font_color_pressed = Color( 0.447059, 0.839216, 0.807843, 1 )
+custom_fonts/font = SubResource( 13 )
+custom_styles/hover = SubResource( 32 )
+custom_styles/pressed = SubResource( 33 )
+custom_styles/focus = SubResource( 15 )
+custom_styles/disabled = SubResource( 34 )
+custom_styles/normal = SubResource( 16 )
+text = "LEFT"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="popup" type="PopupPanel" parent="."]
-visible = true
-margin_right = 1200.0
-margin_bottom = 720.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 custom_styles/panel = SubResource( 19 )
 script = ExtResource( 4 )
 __meta__ = {
@@ -272,21 +361,25 @@ __meta__ = {
 }
 
 [node name="press_a_key" type="Label" parent="popup"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -162.0
-margin_top = -33.0
-margin_right = 143.0
-margin_bottom = 39.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 413.0
+margin_top = 289.0
+margin_right = -412.0
+margin_bottom = -310.0
 custom_colors/font_color = Color( 0.447059, 0.839216, 0.807843, 1 )
 custom_fonts/font = SubResource( 12 )
 text = "Press a key ..."
+align = 1
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [connection signal="pressed" from="echap" to="." method="_on_echap_pressed"]
 [connection signal="pressed" from="input_interact" to="." method="_on_input_interact_pressed"]
+[connection signal="pressed" from="input_down" to="." method="_on_input_interact_pressed"]
+[connection signal="pressed" from="input_up" to="." method="_on_input_interact_pressed"]
+[connection signal="pressed" from="input_right" to="." method="_on_input_interact_pressed"]
+[connection signal="pressed" from="input_left" to="." method="_on_input_interact_pressed"]
 [connection signal="about_to_show" from="popup" to="." method="_on_popup_about_to_show"]
