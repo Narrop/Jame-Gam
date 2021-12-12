@@ -9,6 +9,7 @@ var on_object = null
 var got_key = false
 
 
+
 func get_input():
 	
 	velocity = Vector2.ZERO
@@ -42,22 +43,24 @@ func _on_detector_area_exited(area):
 	on_object = null
 
 func _physics_process(delta):
-	
-	get_input()
-	
-		# change l'animation en fonction du déplacement du joueur
-	if velocity == Vector2.ZERO:
-		$AnimatedSprite.animation = "standing"
-	else:
-		$AnimatedSprite.animation = "running"
-	
-	#fonction qui fait bouger un kinematic body
-	velocity = move_and_slide(velocity)
+	if $AnimatedSprite.animation != "dead":
+		get_input()
+		
+			# change l'animation en fonction du déplacement du joueur
+		if velocity == Vector2.ZERO:
+			$AnimatedSprite.animation = "standing"
+		else:
+			$AnimatedSprite.animation = "running"
+		
+		#fonction qui fait bouger un kinematic body
+		velocity = move_and_slide(velocity)
 
 
 func _on_monster_body_entered(body):
-	$death_time.start()
-	$music_defeat.play()
+	if $AnimatedSprite.animation != "dead":
+		$death_time.start()
+		$music_defeat.play()
+		$AnimatedSprite.animation = "dead"
 
 
 

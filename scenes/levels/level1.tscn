@@ -755,13 +755,13 @@ polygon = PoolVector2Array( 11, -9, 11, 14, -13, 14, -13, -10, 11, -10, 11, -16,
 [node name="music_menu_tuto" type="AudioStreamPlayer" parent="." groups=["MUSIC"]]
 stream = ExtResource( 6 )
 
-[node name="time" parent="." instance=ExtResource( 5 )]
-position = Vector2( 168, 80 )
-
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
 visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2"]
 polygon = PoolVector2Array( 11, -9, 11, 14, -13, 14, -13, -10, 11, -10, 11, -16, -19, -16, -19, 19, 17, 19, 17, -16, 11, -16 )
+
+[node name="time" parent="." instance=ExtResource( 5 )]
+position = Vector2( 197, 87 )
 
 [connection signal="pressed" from="echap" to="." method="_on_echap_pressed"]
