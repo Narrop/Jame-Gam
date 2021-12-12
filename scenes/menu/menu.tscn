@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://assets/Fonts/FantaisieArtistique.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://assets/images/0x72_DungeonTilesetII_v1.4/frames/imp_run_anim_f0.png" type="Texture" id=2]
@@ -14,8 +14,8 @@
 [ext_resource path="res://assets/sound_effects/soubi-01.wav" type="AudioStream" id=12]
 [ext_resource path="res://assets/musics and sounds/Joel Francis Burford Free JRPG 8-Bit Music + SFX Samples/WAV Loops/01 Adventure Awaits (LOOP).wav" type="AudioStream" id=13]
 
-[sub_resource type="StreamTexture" id=18]
-load_path = "res://.import/cX+RV3.png-6e11399e5a42cfac600026c6373fbfc7.stex"
+[sub_resource type="StyleBoxFlat" id=21]
+bg_color = Color( 0, 0, 0, 1 )
 
 [sub_resource type="DynamicFont" id=1]
 size = 51
@@ -72,6 +72,12 @@ animations = [ {
 "speed": 10.0
 } ]
 
+[sub_resource type="DynamicFont" id=19]
+size = 150
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxEmpty" id=20]
+
 [node name="menu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -80,14 +86,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="menu_bg" type="TextureRect" parent="."]
+[node name="menu_bg" type="Panel" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -422.0
-margin_top = -458.0
+margin_top = -456.0
 margin_right = 206.0
-margin_bottom = 158.0
-texture = SubResource( 18 )
+margin_bottom = 160.0
+custom_styles/panel = SubResource( 21 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -97,10 +103,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -81.0
-margin_top = -36.0
-margin_right = 82.0
-margin_bottom = 20.0
+margin_left = -91.0
+margin_top = -28.0
+margin_right = 72.0
+margin_bottom = 28.0
 custom_colors/font_color = Color( 0.447059, 0.839216, 0.807843, 1 )
 custom_colors/font_color_hover = Color( 0.854902, 0.305882, 0.219608, 0.811765 )
 custom_fonts/font = SubResource( 1 )
@@ -144,10 +150,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -81.0
-margin_top = 92.0
-margin_right = 94.0
-margin_bottom = 148.0
+margin_left = -91.0
+margin_top = 28.0
+margin_right = 84.0
+margin_bottom = 84.0
 custom_colors/font_color = Color( 0.447059, 0.839216, 0.807843, 1 )
 custom_colors/font_color_hover = Color( 0.854902, 0.305882, 0.219608, 0.811765 )
 custom_fonts/font = SubResource( 7 )
@@ -162,14 +168,15 @@ __meta__ = {
 }
 
 [node name="knight" type="AnimatedSprite" parent="."]
-position = Vector2( 667, 319 )
+position = Vector2( 658, 327 )
 frames = SubResource( 13 )
-frame = 3
+frame = 2
 playing = true
 
 [node name="demon" type="AnimatedSprite" parent="."]
-position = Vector2( 569, 324 )
+position = Vector2( 560, 333 )
 frames = SubResource( 14 )
+frame = 3
 playing = true
 
 [node name="button_pressed" type="AudioStreamPlayer" parent="." groups=["SOUND_EFFECT"]]
@@ -177,6 +184,38 @@ stream = ExtResource( 12 )
 
 [node name="music_menu_tuto" type="AudioStreamPlayer" parent="." groups=["MUSIC"]]
 stream = ExtResource( 13 )
+
+[node name="time" type="Label" parent="."]
+margin_left = 129.0
+margin_top = 50.0
+margin_right = 497.0
+margin_bottom = 361.0
+custom_colors/font_color = Color( 0.447059, 0.839216, 0.807843, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 5
+custom_fonts/font = SubResource( 19 )
+custom_styles/normal = SubResource( 20 )
+text = "TIME
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="demons" type="Label" parent="."]
+margin_left = 481.0
+margin_top = 50.0
+margin_right = 1316.0
+margin_bottom = 204.0
+custom_colors/font_color = Color( 0.854902, 0.305882, 0.219608, 0.811765 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 5
+custom_fonts/font = SubResource( 19 )
+custom_styles/normal = SubResource( 20 )
+text = "DEMONS"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [connection signal="gui_input" from="." to="." method="_on_menu_gui_input"]
 [connection signal="mouse_entered" from="start" to="." method="_on_start_mouse_entered"]
