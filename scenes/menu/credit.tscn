@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
+[ext_resource path="res://assets/musics and sounds/Joel Francis Burford Free JRPG 8-Bit Music + SFX Samples/WAV Loops/01 Adventure Awaits (LOOP).wav" type="AudioStream" id=1]
 [ext_resource path="res://scenes/menu/credit.gd" type="Script" id=2]
 
 [sub_resource type="DynamicFontData" id=12]
@@ -100,5 +101,8 @@ color = Color( 0.447059, 0.839216, 0.807843, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="music_menu_tuto" type="AudioStreamPlayer" parent="." groups=["MUSIC"]]
+stream = ExtResource( 1 )
 
 [connection signal="pressed" from="echap" to="." method="_on_echap_pressed"]
