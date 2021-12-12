@@ -12,6 +12,9 @@ func _ready():
 	$music_menu_tuto.play()
 
 
+func get_path_direction(pos):
+	return $player.global_position.x
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if(Input.is_action_just_pressed("ui_accept")):
@@ -24,6 +27,7 @@ func _process(delta):
 		else:
 			$player/Text3.visible = false
 			$StaticBody2D/CollisionPolygon2D.disabled = true
+			$StaticBody2D2/CollisionPolygon2D.disabled = true
 
 
 func _on_echap_pressed():

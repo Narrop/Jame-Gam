@@ -43,15 +43,18 @@ func _on_detector_area_exited(area):
 
 func _physics_process(delta):
 	
-	var zero = Vector2.ZERO
-	
 	get_input()
 	
 		# change l'animation en fonction du déplacement du joueur
-	if velocity == zero:
+	if velocity == Vector2.ZERO:
 		$AnimatedSprite.animation = "standing"
 	else:
 		$AnimatedSprite.animation = "running"
 	
 	#fonction qui fait bouger un kinematic body
 	velocity = move_and_slide(velocity)
+
+
+func _on_monster_body_entered(body):
+	get_tree().change_scene("res://scenes/menu/game_over.tscn")
+	print("aa")
