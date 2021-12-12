@@ -30,6 +30,7 @@ animations = [ {
 radius = 170.003
 
 [node name="time2" type="KinematicBody2D"]
+collision_layer = 5
 script = ExtResource( 9 )
 __meta__ = {
 "_edit_group_": true
