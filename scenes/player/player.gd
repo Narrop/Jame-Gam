@@ -56,6 +56,11 @@ func _physics_process(delta):
 
 
 func _on_monster_body_entered(body):
+	$death_time.start()
 	$music_defeat.play()
-	get_tree().change_scene("res://scenes/menu/game_over.tscn")
+
 	
+
+
+func _on_death_time_timeout():
+	get_tree().change_scene("res://scenes/menu/game_over.tscn")
