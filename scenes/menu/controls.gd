@@ -11,11 +11,6 @@ func _ready():
 	pass # Replace with function body.
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
-
 func _on_echap_pressed():
 	var error = get_tree().change_scene("res://scenes/menu/menu.tscn")
 	if (error != OK):
@@ -34,9 +29,14 @@ func pop_up():
 	else :
 		$popup.visible = true 
 
+func _input(ev):
+	if ev is InputEventKey :
+		print(ev.scancode)
+		
+
 func _on_input_interact_pressed():
 	pop_up()
 	while (42): 
-		var totaux = "z"
+		_input(InputEvent)
 		
 		
