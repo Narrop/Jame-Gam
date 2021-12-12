@@ -1,9 +1,13 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://scenes/key/key.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/images/0x72_DungeonTilesetII_v1.4/0x72_DungeonTilesetII_v1.4.png" type="Texture" id=2]
 [ext_resource path="res://assets/musics and sounds/Joel Francis Burford Free JRPG 8-Bit Music + SFX Samples/WAV Loops/02 A Hero's Calling (LOOP).wav" type="AudioStream" id=3]
 [ext_resource path="res://scenes/levels/level2.gd" type="Script" id=4]
+[ext_resource path="res://scenes/player/player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/time/time.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/time/time3.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/time/time2.tscn" type="PackedScene" id=8]
 
 [sub_resource type="InputEventAction" id=1]
 action = "ui_cancel"
@@ -656,10 +660,11 @@ points = PoolVector2Array( 16, 16, 10.9861, 16, 10.9861, 11.9218, 16, 11.9218 )
 script = ExtResource( 4 )
 
 [node name="Panel" type="Panel" parent="."]
-margin_left = -4322.0
-margin_top = -3149.0
-margin_right = 7413.0
-margin_bottom = 4945.0
+margin_left = -4166.0
+margin_top = -3014.0
+margin_right = 7569.0
+margin_bottom = 5080.0
+rect_pivot_offset = Vector2( 3322, 2971 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -690,10 +695,55 @@ __meta__ = {
 }
 
 [node name="key" parent="." instance=ExtResource( 1 )]
-position = Vector2( 805, 399 )
+position = Vector2( -172, -266 )
 
 [node name="music_advent" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
 volume_db = -20.0
+
+[node name="player" parent="." instance=ExtResource( 5 )]
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+visible = false
+current = true
+zoom = Vector2( 0.25, 0.25 )
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="time5" parent="Node2D" instance=ExtResource( 6 )]
+position = Vector2( 1296, 448 )
+
+[node name="time4" parent="Node2D" instance=ExtResource( 6 )]
+position = Vector2( 424, -184 )
+
+[node name="time3" parent="Node2D" instance=ExtResource( 6 )]
+position = Vector2( 1120, -128 )
+
+[node name="time" parent="Node2D" instance=ExtResource( 6 )]
+position = Vector2( 1384, 184 )
+
+[node name="time6" parent="Node2D" instance=ExtResource( 6 )]
+position = Vector2( -656, 304 )
+
+[node name="time7" parent="Node2D" instance=ExtResource( 6 )]
+position = Vector2( -639, 58 )
+
+[node name="time8" parent="Node2D" instance=ExtResource( 6 )]
+position = Vector2( -508, 228 )
+
+[node name="time9" parent="Node2D" instance=ExtResource( 6 )]
+position = Vector2( -322, -777 )
+
+[node name="time10" parent="Node2D" instance=ExtResource( 6 )]
+position = Vector2( -204, -631 )
+
+[node name="time11" parent="Node2D" instance=ExtResource( 7 )]
+position = Vector2( -758, -385 )
+
+[node name="time12" parent="Node2D" instance=ExtResource( 7 )]
+position = Vector2( 769, 379 )
+
+[node name="time13" parent="Node2D" instance=ExtResource( 8 )]
+position = Vector2( 16, -254 )
 
 [connection signal="pressed" from="echap" to="." method="_on_echap_pressed"]
