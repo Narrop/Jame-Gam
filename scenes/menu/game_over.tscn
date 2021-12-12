@@ -24,7 +24,6 @@ animations = [ {
 
 [sub_resource type="InputEventAction" id=11]
 action = "ui_cancel"
-pressed = true
 
 [sub_resource type="ShortCut" id=10]
 shortcut = SubResource( 11 )
@@ -60,6 +59,7 @@ one_shot = true
 position = Vector2( 667, 312 )
 scale = Vector2( 1.8125, 1.58767 )
 frames = SubResource( 4 )
+frame = 2
 playing = true
 
 [node name="echap" type="Button" parent="."]
