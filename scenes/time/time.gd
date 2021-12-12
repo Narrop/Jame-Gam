@@ -21,5 +21,6 @@ func _physics_process(delta):
 	
 	velocity = move_and_slide(velocity)
 
-func _on_DetectRadius_body_entered(body):
-	player = body
+
+func _on_DetectRadius_area_entered(area):
+	player = area
