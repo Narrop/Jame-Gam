@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://scenes/key/key.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/images/0x72_DungeonTilesetII_v1.4/0x72_DungeonTilesetII_v1.4.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://scenes/time/time3.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/time/time2.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/time/time.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/player/player.tscn" type="PackedScene" id=8]
 
 [sub_resource type="InputEventAction" id=1]
 action = "ui_cancel"
@@ -693,43 +694,48 @@ __meta__ = {
 }
 
 [node name="key" parent="." instance=ExtResource( 1 )]
-position = Vector2( 805, 399 )
+position = Vector2( -52, -1135 )
 
 [node name="music_advent" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
 volume_db = -20.0
 
-[node name="time3" parent="." instance=ExtResource( 5 )]
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="time3" parent="Node2D" instance=ExtResource( 5 )]
 position = Vector2( -320, -744 )
 
-[node name="time4" parent="." instance=ExtResource( 5 )]
+[node name="time4" parent="Node2D" instance=ExtResource( 5 )]
 position = Vector2( -864, -344 )
 
-[node name="time5" parent="." instance=ExtResource( 5 )]
+[node name="time5" parent="Node2D" instance=ExtResource( 5 )]
 position = Vector2( 1376, 192 )
 
-[node name="time2" parent="." instance=ExtResource( 6 )]
+[node name="time2" parent="Node2D" instance=ExtResource( 6 )]
 position = Vector2( 488, -344 )
 
-[node name="time6" parent="." instance=ExtResource( 6 )]
+[node name="time6" parent="Node2D" instance=ExtResource( 6 )]
 position = Vector2( -640, 48 )
 
-[node name="time7" parent="." instance=ExtResource( 6 )]
+[node name="time7" parent="Node2D" instance=ExtResource( 6 )]
 position = Vector2( -1024, -832 )
 
-[node name="time8" parent="." instance=ExtResource( 6 )]
+[node name="time8" parent="Node2D" instance=ExtResource( 6 )]
 position = Vector2( -1176, -480 )
 
-[node name="time" parent="." instance=ExtResource( 7 )]
+[node name="time" parent="Node2D" instance=ExtResource( 7 )]
 position = Vector2( -536, -1240 )
 
-[node name="time9" parent="." instance=ExtResource( 7 )]
+[node name="time9" parent="Node2D" instance=ExtResource( 7 )]
 position = Vector2( -248, -312 )
 
-[node name="time10" parent="." instance=ExtResource( 7 )]
+[node name="time10" parent="Node2D" instance=ExtResource( 7 )]
 position = Vector2( -1176, -1216 )
 
-[node name="time11" parent="." instance=ExtResource( 7 )]
+[node name="time11" parent="Node2D" instance=ExtResource( 7 )]
 position = Vector2( -112, -24 )
+
+[node name="player" parent="." instance=ExtResource( 8 )]
+position = Vector2( -766, -755 )
 
 [connection signal="pressed" from="echap" to="." method="_on_echap_pressed"]
