@@ -90,6 +90,7 @@ __meta__ = {
 
 [node name="mouahaha" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
+volume_db = 10.0
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="pressed" from="echap" to="." method="_on_echap_pressed"]
