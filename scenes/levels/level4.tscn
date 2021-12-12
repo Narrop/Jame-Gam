@@ -1,9 +1,13 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://scenes/key/key.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/images/0x72_DungeonTilesetII_v1.4/0x72_DungeonTilesetII_v1.4.png" type="Texture" id=2]
 [ext_resource path="res://assets/musics and sounds/Joel Francis Burford Free JRPG 8-Bit Music + SFX Samples/WAV Loops/02 A Hero's Calling (LOOP).wav" type="AudioStream" id=3]
 [ext_resource path="res://scenes/levels/level2.gd" type="Script" id=4]
+[ext_resource path="res://scenes/player/player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/time/time2.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/time/time3.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/time/time.tscn" type="PackedScene" id=8]
 
 [sub_resource type="InputEventAction" id=1]
 action = "ui_cancel"
@@ -690,10 +694,53 @@ __meta__ = {
 }
 
 [node name="key" parent="." instance=ExtResource( 1 )]
-position = Vector2( 805, 399 )
+position = Vector2( -448, 223 )
 
 [node name="music_advent" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
 volume_db = -20.0
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="time3" parent="Node2D" instance=ExtResource( 7 )]
+position = Vector2( -1168, -480 )
+
+[node name="time4" parent="Node2D" instance=ExtResource( 7 )]
+position = Vector2( 1370, 447 )
+
+[node name="time5" parent="Node2D" instance=ExtResource( 7 )]
+position = Vector2( 1386, 165 )
+
+[node name="time2" parent="Node2D" instance=ExtResource( 6 )]
+position = Vector2( -193, -1268 )
+
+[node name="time6" parent="Node2D" instance=ExtResource( 6 )]
+position = Vector2( -452, 95 )
+
+[node name="time7" parent="Node2D" instance=ExtResource( 6 )]
+position = Vector2( -576, -1256 )
+
+[node name="time8" parent="Node2D" instance=ExtResource( 6 )]
+position = Vector2( -792, -373 )
+
+[node name="time" parent="Node2D" instance=ExtResource( 8 )]
+position = Vector2( 359, -24 )
+
+[node name="time9" parent="Node2D" instance=ExtResource( 8 )]
+position = Vector2( -800, -143 )
+
+[node name="time10" parent="Node2D" instance=ExtResource( 8 )]
+position = Vector2( -568, -862 )
+
+[node name="time11" parent="Node2D" instance=ExtResource( 8 )]
+position = Vector2( -336, -420 )
+
+[node name="player" parent="." instance=ExtResource( 5 )]
+position = Vector2( 868, 395 )
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+visible = false
+current = true
+zoom = Vector2( 0.25, 0.25 )
 
 [connection signal="pressed" from="echap" to="." method="_on_echap_pressed"]
