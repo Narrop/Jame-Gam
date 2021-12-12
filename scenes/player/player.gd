@@ -41,6 +41,7 @@ func _on_detector_area_exited(area):
 	on_object = null
 
 func _physics_process(delta):
+	
 	if $AnimatedSprite.animation != "dead":
 		get_input()
 		
