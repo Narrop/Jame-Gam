@@ -57,4 +57,4 @@ func _physics_process(delta):
 
 func _on_monster_body_entered(body):
 	get_tree().change_scene("res://scenes/menu/game_over.tscn")
-	print("aa")
+	$music_menu_tuto.play()
