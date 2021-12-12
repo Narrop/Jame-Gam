@@ -30,8 +30,7 @@ func get_input():
 	if Input.is_action_pressed("ui_select") and on_object != null:
 		if (on_object.is_in_group("KEY")):
 			got_key = true
-			$collect_time.start()
-			$key_collect.play()
+			get_tree().change_scene("res://scenes/levels/level" + str(int(get_tree().current_scene.name) + 1) + ".tscn")
 			get_tree().call_group("KEY", "queue_free")
 		
 func _on_detector_area_entered(area):
@@ -67,5 +66,3 @@ func _on_monster_body_entered(body):
 func _on_death_time_timeout():
 	get_tree().change_scene("res://scenes/menu/game_over.tscn")
 	
-func _on_collect_time_timeout():
-		get_tree().change_scene("res://scenes/levels/level" + str(int(get_tree().current_scene.name) + 1) + ".tscn")
