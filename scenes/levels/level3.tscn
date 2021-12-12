@@ -1,8 +1,9 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://scenes/key/key.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/player/player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/images/0x72_DungeonTilesetII_v1.4/0x72_DungeonTilesetII_v1.4.png" type="Texture" id=3]
+[ext_resource path="res://assets/musics and sounds/Joel Francis Burford Free JRPG 8-Bit Music + SFX Samples/WAV Loops/02 A Hero's Calling (LOOP).wav" type="AudioStream" id=4]
 
 [sub_resource type="InputEventAction" id=3]
 action = "ui_cancel"
@@ -761,3 +762,6 @@ zoom = Vector2( 0.25, 0.25 )
 
 [node name="key" parent="." instance=ExtResource( 1 )]
 position = Vector2( -340.268, 371.824 )
+
+[node name="music_advent" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
