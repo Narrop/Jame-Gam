@@ -8,12 +8,12 @@
 [sub_resource type="StyleBoxFlat" id=9]
 bg_color = Color( 0, 0, 0, 1 )
 
-[sub_resource type="InputEventAction" id=7]
+[sub_resource type="InputEventAction" id=35]
 action = "ui_cancel"
 pressed = true
 
 [sub_resource type="ShortCut" id=8]
-shortcut = SubResource( 7 )
+shortcut = SubResource( 35 )
 
 [sub_resource type="DynamicFont" id=10]
 size = 51
